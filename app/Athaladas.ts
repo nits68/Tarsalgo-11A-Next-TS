@@ -13,6 +13,10 @@ export default class Athaladas {
     return this.#irány;
   }
 
+  get idő(): string {
+    return `${this.#óra}:${this.#perc}`;
+  }
+
   constructor(sor: string) {
     const m: string[] = sor.split(" ");
     this.#óra = parseInt(m[0]);
